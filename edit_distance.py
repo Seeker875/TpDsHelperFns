@@ -1,9 +1,8 @@
 # Uses python3
 def edit_distance(s, t):
-    #write your code here
     #s="editing"
-
-
+	
+    	
 	sLen,tLen=len(s),len(t)
 
 	DistM = [[0 for x in range(tLen+1)] for y in range(sLen+1)] 
@@ -20,7 +19,8 @@ def edit_distance(s, t):
 	        Ins= DistM[i][j-1]+1
 	        Del= DistM[i-1][j]+1
 	        Mtch= DistM[i-1][j-1]
-	        Mis= DistM[i-1][j-1]+1
+		# for Levenstien make this +2, for mismatch
+	        Mis= DistM[i-1][j-1]+2
 	        #print(f'i{i} j{j}')
 	        if s[i-1]==t[j-1]:
 	            DistM[i][j]=min(Ins,Del,Mtch)
