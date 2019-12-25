@@ -7,3 +7,4 @@ Includes
 3. ChiSq and Cramer Index
 4. Proportion 
 5. ZeroVar and Miss %
+6. Levenstien Distance
